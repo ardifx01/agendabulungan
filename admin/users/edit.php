@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $hash = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $pdo->prepare("UPDATE users SET nama_lengkap = :nama_lengkap, username = :username, password = :password, role = :role WHERE id = :id");
             $stmt->execute([
-                'nama'     => $nama_lengkap,
+                'nama_lengkap'     => $nama,
                 'username' => $username,
                 'password' => $hash,
                 'role'     => $role,
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $stmt = $pdo->prepare("UPDATE users SET nama_lengkap = :nama_lengkap, username = :username, role = :role WHERE id = :id");
             $stmt->execute([
-                'nama'     => $nama_lengkap,
+                'nama_lengkap'     => $nama,
                 'username' => $username,
                 'role'     => $role,
                 'id'       => $id

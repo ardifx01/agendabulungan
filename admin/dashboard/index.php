@@ -7,7 +7,7 @@ require_once '../../core/helper.php';
 require_once '../../core/functions.php';
 
 if (!is_logged_in()) {
-    redirect('login.php');
+    redirect('../login.php');
 }
 
 $user = current_user();
