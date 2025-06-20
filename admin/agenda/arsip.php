@@ -2,6 +2,7 @@
 require_once '../../config/db.php';
 require_once '../../core/functions.php';
 require_once '../../config/auth.php';
+require_once '../../core/helper.php';
 
 require_login();
 

@@ -5,6 +5,7 @@ require_once '../../config/constants.php';
 require_once '../../core/session.php';
 require_once '../../core/flash.php';
 require_once '../../core/functions.php';
+require_once '../../core/helper.php';
 
 if ($_SESSION['user']['role'] !== 'admin') {
     header('Location: ../dashboard.php');

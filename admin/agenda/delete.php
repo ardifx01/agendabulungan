@@ -4,6 +4,7 @@ require_once '../../config/auth.php';
 require_once '../../core/session.php';
 require_once '../../core/flash.php';
 require_once '../../core/functions.php';
+require_once '../../core/helper.php';
 
 require_login();
 

@@ -1,24 +1,24 @@
 <?php
-require_once '../../config/db.php';
+require_once '../../../config/db.php';
 header('Content-Type: application/json');
 
 $input = json_decode(file_get_contents('php://input'), true);
 
 // Validasi input
-if (!isset($input['pejabat_id'], $input['status_keberadaan'])) {
+if (!isset($input['pejabat_id'], $input['status'])) {
     echo json_encode([
         'success' => false,
-        'message' => 'Data wajib (pejabat_id, status_keberadaan) harus diisi.'
+        'message' => 'Data wajib (pejabat_id, status) harus diisi.'
     ]);
     exit;
 }
 
 try {
-    $stmt = $pdo->prepare("INSERT INTO keberadaan (pejabat_id, status_keberadaan, waktu_update)
+    $stmt = $pdo->prepare("INSERT INTO keberadaan (pejabat_id, status, updated_at)
                            VALUES (?, ?, NOW())");
     $stmt->execute([
         $input['pejabat_id'],
-        $input['status_keberadaan']
+        $input['status']
     ]);
 
     echo json_encode([
