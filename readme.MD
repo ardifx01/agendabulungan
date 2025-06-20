@@ -19,5 +19,5 @@ Aplikasi ini digunakan untuk mengelola dan menampilkan informasi agenda resmi se
 - DOMPDF untuk export PDF
 - Struktur API RESTful
 
-**Dibuat oleh: Seggaf dari DKIP Kabupaten Bulungan  
+**Dibuat oleh:** Seggaf dari DKIP Kabupaten Bulungan  
 **Lisensi:** Internal Pemkab Bulungan
