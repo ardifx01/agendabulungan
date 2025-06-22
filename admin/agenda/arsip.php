@@ -67,7 +67,7 @@ include '../partials/sidebar.php';
                 <td class="border px-2 py-1"><?= e(getProtokoler($pdo, $agenda['id'])) ?></td>
                 <td class="border px-2 py-1">
                     <?php if (!empty($agenda['undangan'])): ?>
-                        <a href="uploads/agenda/<?= e($agenda['undangan']) ?>" class="text-blue-500 underline" target="_blank">Lihat</a>
+                        <a href="../uploads/agenda/<?= e($agenda['undangan']) ?>" class="text-blue-500 underline" target="_blank">Lihat</a>
                     <?php else: ?>
                         <span class="text-gray-400">-</span>
                     <?php endif; ?>
